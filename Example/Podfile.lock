@@ -1,0 +1,16 @@
+PODS:
+  - ColorWheelView (1.0.0)
+
+DEPENDENCIES:
+  - ColorWheelView (from `../`)
+
+EXTERNAL SOURCES:
+  ColorWheelView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ColorWheelView: e38f9a84e3f94dbda0edf330568cafc4bd45a5bc
+
+PODFILE CHECKSUM: 2049f2707df5bf3f0737e67b7ca81f1842f339c4
+
+COCOAPODS: 1.12.0

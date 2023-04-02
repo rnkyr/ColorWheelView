@@ -6,12 +6,12 @@
 //
 
 import UIKit
-//import ColorWheelView
+import ColorWheelView
 
 class ViewController: UIViewController {
     
-//    private var colorWheelView: ColorWheelView!
-//    private var selectColorButton: UIButton!
+    private var colorWheelView: ColorWheelView!
+    private var selectColorButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +25,20 @@ class ViewController: UIViewController {
             height: height
         )
         
-//        colorWheelView = ColorWheelView(frame: frame)
-//        colorWheelView.layer.borderWidth = 1
-//        view.addSubview(colorWheelView)
-//
-//        selectColorButton = UIButton(type: .system)
-//        selectColorButton.setTitle("Select random color", for: [])
-//        selectColorButton.frame = CGRect(
-//            x: frame.midX - 100,
-//            y: frame.minY - 200,
-//            width: 200,
-//            height: 44
-//        )
-//        selectColorButton.addTarget(self, action: #selector(selectRandomColor), for: .primaryActionTriggered)
-//        view.addSubview(selectColorButton)
+        colorWheelView = ColorWheelView(frame: frame)
+        colorWheelView.layer.borderWidth = 1
+        view.addSubview(colorWheelView)
+
+        selectColorButton = UIButton(type: .system)
+        selectColorButton.setTitle("Select random color", for: [])
+        selectColorButton.frame = CGRect(
+            x: frame.midX - 100,
+            y: frame.minY - 200,
+            width: 200,
+            height: 44
+        )
+        selectColorButton.addTarget(self, action: #selector(selectRandomColor), for: .primaryActionTriggered)
+        view.addSubview(selectColorButton)
     }
     
     @objc
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         let brightness: CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5
         let color = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
         
-//        colorWheelView.select(color: .init(color))
-//        selectColorButton.backgroundColor = color
+        colorWheelView.select(color: .init(color))
+        selectColorButton.backgroundColor = color
     }
 }
